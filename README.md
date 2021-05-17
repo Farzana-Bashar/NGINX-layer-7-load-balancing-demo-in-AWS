@@ -39,9 +39,9 @@ Then create subnet in this VPC (nginx-prod-vpc).
 
 <kbd> <img width="800" alt="7-subnet" src="https://user-images.githubusercontent.com/76453366/118483533-ef408780-b737-11eb-89c5-2371d1dca123.png"> </kbd>
 
-provide IPV4 CIDR range.
+Now provide IPV4 CIDR range.
 
-REMEMBER -
+#### REMEMBER -
 
 The CIDR block of a subnet can be the same as the CIDR block for the VPC (for a single subnet in the VPC), or a subset of the CIDR block for the VPC (for multiple subnets). The allowed block size is between a /28 netmask and /16 netmask. If you create more than one subnet in a VPC, the CIDR blocks of the subnets cannot overlap.
 
