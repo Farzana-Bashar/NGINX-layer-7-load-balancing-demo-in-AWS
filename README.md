@@ -98,7 +98,7 @@ Here I use an existing security group, though it would be better if create a new
 <kbd> <img width="800" alt="16-ec2" src="https://user-images.githubusercontent.com/76453366/118483976-84438080-b738-11eb-9975-0d35e82a9ccc.png"> </kbd>
 
 #### Step 7: Review Instance Launch 
-window, verify the settings are correct.
+verify the settings are correct.
 
 then, When you click the  Launch  button, a window pops up asking you to select an existing key pair or create a new key pair. Take the appropriate action for your use case, then click the  Launch Instances  button.
 
