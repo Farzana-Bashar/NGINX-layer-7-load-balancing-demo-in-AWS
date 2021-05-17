@@ -21,7 +21,7 @@ from VPC, select 'internet gateway', then click to 'Create internet gateway'.
 
 <kbd> <img width="800" alt="3-igw" src="https://user-images.githubusercontent.com/76453366/118482125-201fbd00-b736-11eb-8ceb-098dffcdf009.png"> </kbd>
 
-Your IGW is created, now attatched it to the VPC.
+Your IGW is created, now attatched it to the VPC (nginx-prod-vpc).
 
 <kbd> <img width="800" alt="4-igw-attatch" src="https://user-images.githubusercontent.com/76453366/118482758-ff0b9c00-b736-11eb-8210-91994da970d9.png"> </kbd>
 
@@ -47,32 +47,87 @@ The CIDR block of a subnet can be the same as the CIDR block for the VPC (for a 
 
 For example, if you create a VPC with CIDR block 10.0.0.0/24, it supports 256 IP addresses. You can break this CIDR block into two subnets, each supporting 128 IP addresses. One subnet uses CIDR block 10.0.0.0/25 (for addresses 10.0.0.0 - 10.0.0.127) and the other uses CIDR block 10.0.0.128/25 (for addresses 10.0.0.128 - 10.0.0.255).
 
+Here the CIDR block for the VPC is 10.30.0.0/16 and the CIDR block for the Subnet is 10.30.2.0/24, which is a subset of the CIDR block for the VPC(10.30.0.0/16).
+
 <kbd> <img width="800" alt="8-subnet" src="https://user-images.githubusercontent.com/76453366/118483587-fff0fd80-b737-11eb-947d-9bd833487789.png"> </kbd>
+
+## Create EC2(Elastic Compute Cloud) instance 
+
+from instance, select 'your instances', then click to 'Launch instances'. 
 
 <kbd> <img width="800" alt="9-ec2" src="https://user-images.githubusercontent.com/76453366/118483649-10a17380-b738-11eb-98cb-0dd90cc75948.png"> </kbd>
 
+#### Step 1: Choose an Amazon Machine Image (AMI) 
+window, click the  Select  button for the Ubuntu Server of your choice.
+
 <kbd> <img width="800" alt="10-ec2" src="https://user-images.githubusercontent.com/76453366/118483681-20b95300-b738-11eb-9dce-2b3f10135209.png"> </kbd>
+
+#### Step 2: Choose an Instance Type 
+window, click the radio button for the appropriate instance type. Here I select t2.large
 
 <kbd> <img width="800" alt="11-ec2" src="https://user-images.githubusercontent.com/76453366/118483735-33338c80-b738-11eb-8df2-1430250aedac.png"> </kbd>
 
+####  Step 3: Configure Instance Details 
+window, select the default 
+#### subnet 
+for your VPC in the Subnet field, then click the  
+#### Next: Add Storage  button
+
 <kbd> <img width="800" alt="12-ec2" src="https://user-images.githubusercontent.com/76453366/118483778-421a3f00-b738-11eb-91d4-f8850045fe86.png"> </kbd>
+
 
 <kbd> <img width="800" alt="13-ec2" src="https://user-images.githubusercontent.com/76453366/118483831-52cab500-b738-11eb-9f1c-a06a453a54a7.png"> </kbd>
 
+####  Step 4: Add Storage 
+window, leave the defaults unchanged. Click the  
+#### Next: Add Tags  button.
+
 <kbd> <img width="800" alt="14-ec2" src="https://user-images.githubusercontent.com/76453366/118483891-64ac5800-b738-11eb-932d-d6d9d0829c83.png"> </kbd>
+
+####  Step 5: Add Tags 
+window, click the  
+#### Add Tag  
+button. Type Name in the Key field, and in the Value field type the instance name (the screenshot shows the result).
 
 <kbd> <img width="800" alt="15-ec2" src="https://user-images.githubusercontent.com/76453366/118483925-72fa7400-b738-11eb-922b-1830c19f4398.png"> </kbd>
 
+#### Step 6: Configure Security Group 
+window, select or enter the following values in the indicated fields:
+
+#### Assign a security group –
+If you are setting up a deployment with multiple instances, and this is the first instance you are creating, select 
+#### Create a new security group.
+For subsequent instances, select 
+#### Select an existing security group
+instead (it makes sense for all instances in a deployment to use the same security group).
+
+Here I use an existing security group, though it would be better if create a new security group.
+
 <kbd> <img width="800" alt="16-ec2" src="https://user-images.githubusercontent.com/76453366/118483976-84438080-b738-11eb-9975-0d35e82a9ccc.png"> </kbd>
+
+#### Step 7: Review Instance Launch 
+window, verify the settings are correct.
+
+then, When you click the  Launch  button, a window pops up asking you to select an existing key pair or create a new key pair. Take the appropriate action for your use case, then click the  Launch Instances  button.
+
+<kbd> <img width="800" alt="18-ec2-key" src="https://user-images.githubusercontent.com/76453366/118484997-aee20900-b739-11eb-9ecb-ced58eb630d4.png"> </kbd> 
+
+nginx-ec2 is launched and running.
 
 <kbd> <img width="800" alt="17-ec2-launched" src="https://user-images.githubusercontent.com/76453366/118484017-91f90600-b738-11eb-985f-68d7f97594b2.png"> </kbd>
 
-<kbd> <img width="800" alt="18-ec2-key" src="https://user-images.githubusercontent.com/76453366/118484997-aee20900-b739-11eb-9ecb-ced58eb630d4.png"> </kbd>
+## Create New EC2(Elastic Compute Cloud) instances 
+
+Want to create same ec2 instances, so, select the 'launch more like this' from the button 'launch instances'
 
 <kbd> <img width="800" alt="19-new-ec2-launched" src="https://user-images.githubusercontent.com/76453366/118485062-bc978e80-b739-11eb-9416-2fb7c2003baf.png"> </kbd>
 
+create two ec2 instances like the previous one. Named- nginx-node1-ec2 and nginx-node2-ec2.
+
 <kbd> <img width="800" alt="20-new-ec2-launched" src="https://user-images.githubusercontent.com/76453366/118485285-0c765580-b73a-11eb-87b4-415acb06278f.png"> </kbd>
 
+
+## Route Table
 <kbd> <img width="800" alt="21-route-table" src="https://user-images.githubusercontent.com/76453366/118485326-1c8e3500-b73a-11eb-9342-6339beb02d64.png"> </kbd>
 
 <kbd> <img width="800" alt="22-route-table-created" src="https://user-images.githubusercontent.com/76453366/118485373-2b74e780-b73a-11eb-8e12-66a0c8cda2ee.png"> </kbd>
