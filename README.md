@@ -246,5 +246,5 @@ So, what I have to do, edit/create a new Security Group rules for the node insta
 <kbd> <img width="800" alt="40-final-output" src="https://user-images.githubusercontent.com/76453366/118486821-dc2fb680-b73b-11eb-8a9b-1f6e2fa9c988.png"> </kbd>
 
 ## source: 
-- [Documentation from AWS](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html)
-- [Nginx crush-course__Hussein Nasser](https://www.youtube.com/watch?v=hcw-NjOh8r0&t=873s)
+- [AWS Documentation](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html)
+- [Nginx crush-course by Hussein Nasser](https://www.youtube.com/watch?v=hcw-NjOh8r0&t=873s)
