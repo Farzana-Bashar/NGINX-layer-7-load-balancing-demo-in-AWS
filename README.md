@@ -183,7 +183,7 @@ http {
 
 Initially my docker host port for the application is **8080**, so, in SG(Security Group) allow the traffic for 8080 port.
 
-***Please notice, all three instances share same SG(Security Group). So, if you change in any one, all SG will change. I will separate those in future.**
+**Please notice, all three instances share same SG(Security Group). So, if you change in any one, all SG will change. I will separate those in future.**
 
 <kbd> <img width="800" alt="27-sg-new-rules" src="https://user-images.githubusercontent.com/76453366/118485896-ca99df00-b73a-11eb-884d-0167e2a60465.png"> </kbd>
 
@@ -221,7 +221,7 @@ Now you can see, my application load-balancer is working.
 
 **Here comes the twist. I told you previously, all the instances share same SG, now it's time to separate those.
 Right now I want, only nginx server (nginx-ec2 instance) can have the access to the applications, but from outer world no one can access the 'nginx-node1-ec2' and 'nginx-node2-ec2'. and anyone can have access to the nginx-ec2 instance. I think you get my point. 
-So, what I have to do, edit/create a new Security Group rules for the node instances, where only allows VPC traffic.***
+So, what I have to do, edit/create a new Security Group rules for the node instances, where only allows VPC traffic.**
 
 #### Create new Security Group
 <kbd> <img width="800" alt="33-new-sg for vm1 2" src="https://user-images.githubusercontent.com/76453366/118486373-56137000-b73b-11eb-859d-75ab45506159.png"> </kbd>
@@ -246,5 +246,5 @@ So, what I have to do, edit/create a new Security Group rules for the node insta
 <kbd> <img width="800" alt="40-final-output" src="https://user-images.githubusercontent.com/76453366/118486821-dc2fb680-b73b-11eb-8a9b-1f6e2fa9c988.png"> </kbd>
 
 ## source: 
-[Documentation from AWS](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html)
-[Nginx crush-course__Hussein Nasser](https://www.youtube.com/watch?v=hcw-NjOh8r0&t=873s)
+1.[Documentation from AWS](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html)
+2.[Nginx crush-course__Hussein Nasser](https://www.youtube.com/watch?v=hcw-NjOh8r0&t=873s)
