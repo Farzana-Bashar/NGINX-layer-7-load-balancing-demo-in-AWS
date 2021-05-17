@@ -114,7 +114,7 @@ Want to create same ec2 instances, so, select the 'launch more like this' from t
 
 <kbd> <img width="800" alt="19-new-ec2-launched" src="https://user-images.githubusercontent.com/76453366/118485062-bc978e80-b739-11eb-9416-2fb7c2003baf.png"> </kbd>
 
-create two ec2 instances like the previous one. Named- nginx-node1-ec2 and nginx-node2-ec2.
+create two ec2 instances like the previous one. Named- **nginx-node1-ec2** and **nginx-node2-ec2**.
 
 <kbd> <img width="800" alt="20-new-ec2-launched" src="https://user-images.githubusercontent.com/76453366/118485285-0c765580-b73a-11eb-87b4-415acb06278f.png"> </kbd>
 
