@@ -7,23 +7,45 @@ An AWS account
 ## Creating an Amazon VPC(Virtual Private Cloud)
 
 select VPC from AWS account, then click to 'create VPC'. 
-provide name-tag and IPV4 CIDR range.
+Provide name-tag and IPV4 CIDR range.
 
 <kbd> <img width="800" alt="1-vpc" src="https://user-images.githubusercontent.com/76453366/118481683-8ce68780-b735-11eb-93af-a165a2240dd5.png"> </kbd>
 
-your VPC is created.
+Your VPC is created.
 
 <kbd> <img width="800" alt="2-vpc" src="https://user-images.githubusercontent.com/76453366/118482045-07afa280-b736-11eb-9d60-abb350feb9cf.png"> </kbd>
 
+## Attatched IGW(Internet GateWay) to the VPC
+
+from VPC, select 'internet gateway', then click to 'Create internet gateway'. 
+
 <kbd> <img width="800" alt="3-igw" src="https://user-images.githubusercontent.com/76453366/118482125-201fbd00-b736-11eb-8ceb-098dffcdf009.png"> </kbd>
+
+Your IGW is created, now attatched it to the VPC.
 
 <kbd> <img width="800" alt="4-igw-attatch" src="https://user-images.githubusercontent.com/76453366/118482758-ff0b9c00-b736-11eb-8210-91994da970d9.png"> </kbd>
 
 <kbd> <img width="800" alt="5-igw-attatch" src="https://user-images.githubusercontent.com/76453366/118482816-134f9900-b737-11eb-997e-1736ee4ac675.png"> </kbd>
 
+IGW is attatched to VPC.
+
 <kbd> <img width="800" alt="6-igw--attatched" src="https://user-images.githubusercontent.com/76453366/118483466-db952100-b737-11eb-8d7c-4a2e23d71f23.png"> </kbd>
 
+## Create Subnet
+
+from VPC, select 'subnets', then click to 'Create subnet'. 
+
+Then create subnet in this VPC (nginx-prod-vpc).
+
 <kbd> <img width="800" alt="7-subnet" src="https://user-images.githubusercontent.com/76453366/118483533-ef408780-b737-11eb-89c5-2371d1dca123.png"> </kbd>
+
+provide IPV4 CIDR range.
+
+REMEMBER -
+
+The CIDR block of a subnet can be the same as the CIDR block for the VPC (for a single subnet in the VPC), or a subset of the CIDR block for the VPC (for multiple subnets). The allowed block size is between a /28 netmask and /16 netmask. If you create more than one subnet in a VPC, the CIDR blocks of the subnets cannot overlap.
+
+For example, if you create a VPC with CIDR block 10.0.0.0/24, it supports 256 IP addresses. You can break this CIDR block into two subnets, each supporting 128 IP addresses. One subnet uses CIDR block 10.0.0.0/25 (for addresses 10.0.0.0 - 10.0.0.127) and the other uses CIDR block 10.0.0.128/25 (for addresses 10.0.0.128 - 10.0.0.255).
 
 <kbd> <img width="800" alt="8-subnet" src="https://user-images.githubusercontent.com/76453366/118483587-fff0fd80-b737-11eb-947d-9bd833487789.png"> </kbd>
 
@@ -91,4 +113,4 @@ your VPC is created.
 
 <kbd> <img width="800" alt="40-final-output" src="https://user-images.githubusercontent.com/76453366/118486821-dc2fb680-b73b-11eb-8a9b-1f6e2fa9c988.png"> </kbd>
 
-
+source: https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html
