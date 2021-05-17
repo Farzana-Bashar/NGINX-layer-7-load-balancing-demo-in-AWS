@@ -93,7 +93,7 @@ If you are setting up a deployment with multiple instances, and this is the firs
 **Create a new security group** For subsequent instances, select 
 **Select an existing security group** instead (it makes sense for all instances in a deployment to use the same security group).
 
-Here I use an existing security group, though it would be better if create a new security group.
+Here I use a new security group. It would be better if I changed the name of the SG.
 
 <kbd> <img width="800" alt="16-ec2" src="https://user-images.githubusercontent.com/76453366/118483976-84438080-b738-11eb-9975-0d35e82a9ccc.png"> </kbd>
 
