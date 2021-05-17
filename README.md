@@ -35,7 +35,7 @@ IGW is attatched to VPC.
 
 from VPC, select 'subnets', then click to 'Create subnet'. 
 
-Then create subnet in this VPC (nginx-prod-vpc).
+Then create subnet in this VPC (***nginx-prod-vpc***), named it ***nginx-prod-subnet-01***.
 
 <kbd> <img width="800" alt="7-subnet" src="https://user-images.githubusercontent.com/76453366/118483533-ef408780-b737-11eb-89c5-2371d1dca123.png"> </kbd>
 
@@ -120,7 +120,10 @@ create two ec2 instances like the previous one. Named- **nginx-node1-ec2** and *
 
 
 ## Route Table
+Now go to the subnet (***nginx-prod-subnet-01***) and manage the **route table**. You can see that, there is already a route exists, and it's **destination** is ***10.30.0.0/16*** and **target** is ***local***. It means, in this range(10.30.0.0/16), traffic will travel locally.
 <kbd> <img width="800" alt="21-route-table" src="https://user-images.githubusercontent.com/76453366/118485326-1c8e3500-b73a-11eb-9342-6339beb02d64.png"> </kbd>
+
+Now add another route. If the IP is not in this range(10.30.0.0/16), then traffic will get out of the IGW(Internet Gate way) of the vpc. So, go to the route table and edit it. 
 
 <kbd> <img width="800" alt="22-route-table-created" src="https://user-images.githubusercontent.com/76453366/118485373-2b74e780-b73a-11eb-8e12-66a0c8cda2ee.png"> </kbd>
 
@@ -128,7 +131,12 @@ create two ec2 instances like the previous one. Named- **nginx-node1-ec2** and *
 
 <kbd> <img width="800" alt="24-routetable-rules" src="https://user-images.githubusercontent.com/76453366/118485574-6d9e2900-b73a-11eb-94b7-58f6f839dfac.png"> </kbd>
 
+***Here you may notice, why Name tag is important. In your AWS portal, so many IGWs, VPCs, Subnets, EC2 instances. To find the required one, you need proper Name-tag. 
+In this case, I need the IGW (nginx-prod-igw), which I created for the VPC (nginx-prod-vpc). 
+
 <kbd> <img width="800" alt="25-routetable-rules" src="https://user-images.githubusercontent.com/76453366/118485649-80b0f900-b73a-11eb-8acd-864c641d83f9.png"> </kbd>
+
+## NGINX
 
 <kbd> <img width="800" alt="26-nginx-vm" src="https://user-images.githubusercontent.com/76453366/118485765-9faf8b00-b73a-11eb-9d94-2dcf43c94fda.png"> </kbd>
 
