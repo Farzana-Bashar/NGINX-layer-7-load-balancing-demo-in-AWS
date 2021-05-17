@@ -58,20 +58,17 @@ from instance, select 'your instances', then click to 'Launch instances'.
 <kbd> <img width="800" alt="9-ec2" src="https://user-images.githubusercontent.com/76453366/118483649-10a17380-b738-11eb-98cb-0dd90cc75948.png"> </kbd>
 
 #### Step 1: Choose an Amazon Machine Image (AMI) 
-window, click the  Select  button for the Ubuntu Server of your choice.
+click the  Select  button for the Ubuntu Server of your choice.
 
 <kbd> <img width="800" alt="10-ec2" src="https://user-images.githubusercontent.com/76453366/118483681-20b95300-b738-11eb-9dce-2b3f10135209.png"> </kbd>
 
 #### Step 2: Choose an Instance Type 
-window, click the radio button for the appropriate instance type. Here I select t2.large
+click the radio button for the appropriate instance type. Here I select t2.large
 
 <kbd> <img width="800" alt="11-ec2" src="https://user-images.githubusercontent.com/76453366/118483735-33338c80-b738-11eb-8df2-1430250aedac.png"> </kbd>
 
 ####  Step 3: Configure Instance Details 
-window, select the default 
-#### subnet 
-for your VPC in the Subnet field, then click the  
-#### Next: Add Storage  button
+select the default **subnet** for your VPC in the Subnet field, then click the **Next: Add Storage** button
 
 <kbd> <img width="800" alt="12-ec2" src="https://user-images.githubusercontent.com/76453366/118483778-421a3f00-b738-11eb-91d4-f8850045fe86.png"> </kbd>
 
@@ -79,27 +76,22 @@ for your VPC in the Subnet field, then click the  
 <kbd> <img width="800" alt="13-ec2" src="https://user-images.githubusercontent.com/76453366/118483831-52cab500-b738-11eb-9f1c-a06a453a54a7.png"> </kbd>
 
 ####  Step 4: Add Storage 
-window, leave the defaults unchanged. Click the  
-#### Next: Add Tags  button.
+leave the defaults unchanged. Click the **Next: Add Tags** button.
 
 <kbd> <img width="800" alt="14-ec2" src="https://user-images.githubusercontent.com/76453366/118483891-64ac5800-b738-11eb-932d-d6d9d0829c83.png"> </kbd>
 
 ####  Step 5: Add Tags 
-window, click the  
-#### Add Tag  
-button. Type Name in the Key field, and in the Value field type the instance name (the screenshot shows the result).
+click the **Add Tag** button. Type Name in the **Key** field, and in the **Value** field type the instance name (the screenshot shows the result).
 
 <kbd> <img width="800" alt="15-ec2" src="https://user-images.githubusercontent.com/76453366/118483925-72fa7400-b738-11eb-922b-1830c19f4398.png"> </kbd>
 
 #### Step 6: Configure Security Group 
-window, select or enter the following values in the indicated fields:
+select or enter the following values in the indicated fields:
 
 #### Assign a security group –
 If you are setting up a deployment with multiple instances, and this is the first instance you are creating, select 
-#### Create a new security group.
-For subsequent instances, select 
-#### Select an existing security group
-instead (it makes sense for all instances in a deployment to use the same security group).
+**Create a new security group** For subsequent instances, select 
+**Select an existing security group** instead (it makes sense for all instances in a deployment to use the same security group).
 
 Here I use an existing security group, though it would be better if create a new security group.
 
