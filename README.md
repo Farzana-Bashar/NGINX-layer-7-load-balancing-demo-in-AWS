@@ -2,7 +2,16 @@
 
 ## Prerequisites
 
+An AWS account
+
+## Creating an Amazon VPC(Virtual Private Cloud)
+
+select VPC from AWS account, then click to 'create VPC'. 
+provide name-tag and IPV4 CIDR range.
+
 <kbd> <img width="800" alt="1-vpc" src="https://user-images.githubusercontent.com/76453366/118481683-8ce68780-b735-11eb-93af-a165a2240dd5.png"> </kbd>
+
+your VPC is created.
 
 <kbd> <img width="800" alt="2-vpc" src="https://user-images.githubusercontent.com/76453366/118482045-07afa280-b736-11eb-9d60-abb350feb9cf.png"> </kbd>
 
