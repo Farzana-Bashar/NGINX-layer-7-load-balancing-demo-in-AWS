@@ -53,7 +53,7 @@ Here the CIDR block for the VPC is 10.30.0.0/16 and the CIDR block for the Subne
 
 ## Create EC2(Elastic Compute Cloud) instance 
 
-from instance, select 'your instances', then click to 'Launch instances'. 
+from instance, select ***your instances***, then click to ***Launch instances***. 
 
 <kbd> <img width="800" alt="9-ec2" src="https://user-images.githubusercontent.com/76453366/118483649-10a17380-b738-11eb-98cb-0dd90cc75948.png"> </kbd>
 
@@ -132,7 +132,7 @@ Now add another route. If the IP is not in this range(10.30.0.0/16), then traffi
 <kbd> <img width="800" alt="24-routetable-rules" src="https://user-images.githubusercontent.com/76453366/118485574-6d9e2900-b73a-11eb-94b7-58f6f839dfac.png"> </kbd>
 
 ***Here you may notice, why Name tag is important. In your AWS portal, so many IGWs, VPCs, Subnets, EC2 instances. To find the required one, you need proper Name-tag. 
-In this case, I need the IGW (nginx-prod-igw), which I created for the VPC (nginx-prod-vpc). 
+In this case, I need the IGW (nginx-prod-igw), which I created for the VPC (nginx-prod-vpc).***
 
 <kbd> <img width="800" alt="25-routetable-rules" src="https://user-images.githubusercontent.com/76453366/118485649-80b0f900-b73a-11eb-8acd-864c641d83f9.png"> </kbd>
 
