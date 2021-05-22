@@ -1,4 +1,4 @@
-# deploy-simple-nodejs-app-on-AWS-using-nginx
+# NGINX layer-7 load-balancing demo in AWS
 
 ## Prerequisites
 
