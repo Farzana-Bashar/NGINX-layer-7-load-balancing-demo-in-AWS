@@ -119,6 +119,10 @@ create two ec2 instances like the previous one. Named- **nginx-node1-ec2** and *
 <kbd> <img width="800" alt="20-new-ec2-launched" src="https://user-images.githubusercontent.com/76453366/118485285-0c765580-b73a-11eb-87b4-415acb06278f.png"> </kbd>
 
 
+Deploy the project in ec2 instances (**nginx-node1-ec2** and **nginx-node2-ec2**)
+project link:
+[simple-express-api](https://github.com/Farzana-Bashar/simple-express-api.git)
+
 ## Route Table
 Now go to the subnet (***nginx-prod-subnet-01***) and manage the **route table**. You can see that, there is already a route exists, and it's **destination** is ***10.30.0.0/16*** and **target** is ***local***. It means, in this range(10.30.0.0/16), traffic will travel locally.
 <kbd> <img width="800" alt="21-route-table" src="https://user-images.githubusercontent.com/76453366/118485326-1c8e3500-b73a-11eb-9342-6339beb02d64.png"> </kbd>
